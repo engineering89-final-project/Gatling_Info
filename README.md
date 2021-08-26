@@ -24,9 +24,10 @@
 
 ![save as HAR](images/save_as_HAR.png)
 
-- this HAR file can then be used in the recorder to produce a scala script, the script for this example is shown in this repo: `user-files/simulations/RecordedSimulation.scala`
+- this HAR file can then be used in the recorder to produce a scala script, by selecting the HAR option in the recorder, selecting the correct .har file and clicking start
+- the script for this example is shown in this repo: `user-files/simulations/RecordedSimulation.scala`
 - method of generating an HAR file can capture a complete user journey on a site - logging in, browsing different pages etc
-
+- the `.exec(http("request_0")` commands in the scala file can be renamed for ease of understanding what the script is doing - e.g. `.exec(http("LOAD_HOMEPAGE")`
 
 ## Running Gatling tests
 - in the same `bin` folder, execute the `gatling.sh/gatling.bat`, which will then return a list of simulation examples

@@ -45,7 +45,8 @@ class RecordedSimulation extends Simulation {
     val uri1 = "https://fonts.gstatic.com/s"
 
 	val scn = scenario("RecordedSimulation")
-		.exec(http("request_0")
+		.exec(http("LOAD_HOMEPAGE")
+		// .exec(http("request_0")
 			.get("/")
 			.headers(headers_0)
 			.resources(http("request_1")
