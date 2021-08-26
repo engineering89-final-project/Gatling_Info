@@ -4,10 +4,10 @@
 - a test script is written and then executed
 
 ## Test Types
-- stress test: the maximum number of users a site can process at one time
-- load test: how the site behaves under different numbers of users
-- performance test: same as load test?
-- penetration test: how the site deals with cyber attacks
+- Stress test: The maximum number of users a site can process at one time
+- Load test: Technique that verifies whether the application can handle the expected load
+- Performance test: Concerned with evaluating the overall system's performance and collecting metrics such as availability, response time, and stability.
+- Penetration test: How the site deals with cyber attacks
 
 ## Recorder
 - used to quickly generate scenarios - records a simple simulation used to mimic user behaviour
@@ -19,7 +19,8 @@
 - once this recording is complete, a scala language script will be produced
 - this script can then be configured to run for a set number of users for example
 - https://www.youtube.com/watch?v=viNlhp_cJTk this link goes through the steps tp setup and run the recorder
-### HAR files
+
+## HAR files
 - instead of using the recorder, HAR (HTTP archive recording) files can also be used
 - navigate to the webpage (127.0.0.1:5000 on localhost for this example) and enable the developer tools within the browser
 - in the network tab, clear the list and ensure the recording is enabled and the preserve logs box is checked
