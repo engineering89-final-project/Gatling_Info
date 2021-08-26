@@ -13,3 +13,17 @@
 ## Different tests for different user journies?
 - adding roles as an admin?
 - searching for roles as a user?
+
+## Test tips
+- https://www.youtube.com/watch?v=TlwSZRs6yKo
+- can select no static resources when creating script from HAR - will only test core files/functionality
+- test with and without static? they are often cached anyway
+- ensure full logging is enabled in `conf/logback.xml` - `<logger name="io.gatling.http.engine.response" level="TRACE" />`
+- use Chrome dev tools
+- refactor and remove static content - put common headers in http protocol etc
+- swap out hardcoding for parameters where possible
+- use csv/custom code to include every product/option on site
+- refactor for each method - etc method for homepage, method for roles page, method for sorting etc
+- can create scenarios from methods
+- add in pause times for realism
+- use https://gatling.io/docs/gatling/reference/current/general/simulation_setup/ for injection of users
