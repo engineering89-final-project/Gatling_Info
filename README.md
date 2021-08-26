@@ -45,3 +45,9 @@
 - enter a suitable `rundescription` - what the test is/number of users being tested etc
 - load tests can be set up to add certain numbers of users over certain periods of time, e.g. 10 users added over 5 seconds
 - users are added with the `setUp` command
+
+#### DDOS attack
+-  A distributed denial-of-service (DDoS) attack occurs when multiple systems flood the bandwidth or resources of a targeted system, usually one or more web servers
+- To simulate this, a large number of users are sent at once to try and overload the server. 
+- Similar to load tests but with the goal of crashing the server
+- For example add 100 users every 10 seconds
