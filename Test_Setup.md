@@ -31,4 +31,7 @@
 ## Criteria
 - test t2 micro server at different user numbers and injection rates
 - find "cutoff" points when performance starts to drastically drop
+- AWS autoscaling can be implemented to react to changes in demand
 - if site constantly has over this number suggest upgrading server for web app
+- if the site crashes, have a back-up server which boots up and redirects traffic
+- 
