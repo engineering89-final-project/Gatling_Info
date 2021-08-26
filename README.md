@@ -6,11 +6,13 @@
 ## Recorder
 - used to quickly generate scenarios - records a simple simulation used to mimic user behaviour
 - after downloading the Gatling files, navigate to the `bin` folder and execute the `recorder.sh/recorder.bat` to set this location as the GATLING_HOME
-- this then opens up a Jave recorder page, where network, simulation and output settings can be applied
-- when running tests in browser, the page must also be configured to use the Gatling recorder's proxy
-- the port selected in the recorder config is the port that the browser must connect to so the recorder can capture the navigation, so after setting it in the recorder settings the broser must be configured to the same port
+- this then opens up a Java recorder page, where network, simulation and output settings can be applied
+- when running tests in browser, the page must also be configured to use the Gatling recorder's proxy - this is done on the local machines network settings
+- the port selected in the recorder config is the port that the browser must connect to so the recorder can capture the navigation, so after setting it in the recorder settings the browser must be configured to the same port
+- the recorder runs the tests on the webpage within a proxy server
 - once this recording is complete, a scala language script will be produced
 - this script can then be configured to run for a set number of users for example
+- https://www.youtube.com/watch?v=viNlhp_cJTk this link goes through the steps tp setup and run the recorder
 
 ## Running Gatling tests
 - in the same `bin` folder, execute the `gatling.sh/gatling.bat`, which will then return a list of simulation examples
