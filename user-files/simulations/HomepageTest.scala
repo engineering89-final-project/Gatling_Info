@@ -68,5 +68,7 @@ class RecordedSimulation extends Simulation {
 			.get("/")
 			.headers(headers_6)))
 
-	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+	// setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+	// setUp(scn.inject(atOnceUsers(100))).protocols(httpProtocol)
+	setUp(scn.inject(rampUsers(100).during(5.seconds))).protocols(httpProtocol)
 }
