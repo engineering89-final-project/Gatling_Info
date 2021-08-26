@@ -27,3 +27,8 @@
 - can create scenarios from methods
 - add in pause times for realism
 - use https://gatling.io/docs/gatling/reference/current/general/simulation_setup/ for injection of users
+
+## Criteria
+- test t2 micro server at different user numbers and injection rates
+- find "cutoff" points when performance starts to drastically drop
+- if site constantly has over this number suggest upgrading server for web app
