@@ -3,6 +3,12 @@
 - the test software is configured with the browser instance of the software being tested - in this case it is the ITJobsWatch web app
 - a test script is written and then executed
 
+## Test Types
+- stress test: the maximum number of users a site can process at one time
+- load test: how the site behaves under different numbers of users
+- performance test: same as load test?
+- penetration test: how the site deals with cyber attacks
+
 ## Recorder
 - used to quickly generate scenarios - records a simple simulation used to mimic user behaviour
 - after downloading the Gatling files, navigate to the `bin` folder and execute the `recorder.sh/recorder.bat` to set this location as the GATLING_HOME
