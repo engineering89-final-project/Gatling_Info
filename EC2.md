@@ -18,3 +18,5 @@ lxml
 - Navigate into the project folder `cd jccp`
 - Run `export FLASK_APP=main.py`
 - Run `python3 -m flask run --host=0.0.0.0`
+- The images below show the performance for 100 users, 1,000, users and 10,000 users.
+![EC2 performance](images/EC2_performance.png)
