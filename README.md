@@ -21,33 +21,27 @@
 - https://www.youtube.com/watch?v=viNlhp_cJTk this link goes through the steps tp setup and run the recorder
 
 ## HAR files
-- instead of using the recorder, HAR (HTTP archive recording) files can also be used
-- navigate to the webpage (127.0.0.1:5000 on localhost for this example) and enable the developer tools within the browser
-- in the network tab, clear the list and ensure the recording is enabled and the preserve logs box is checked
+- Instead of using the recorder, HAR (HTTP archive recording) files can also be used
+- Navigate to the webpage (127.0.0.1:5000 on localhost for this example) and enable the developer tools within the browser
+- In the network tab, clear the list and ensure the recording is enabled and the preserve logs box is checked
 
 ![network settings](images/network_settings.png)
 
-- refresh the page, right click inside the list and select `save as HAR with context`
+- Refresh the page, right click inside the list and select `save as HAR with context`
 
 ![save as HAR](images/save_as_HAR.png)
 
-- this HAR file can then be used in the recorder to produce a scala script, by selecting the HAR option in the recorder, selecting the correct .har file and clicking start
-- the script for this example is shown in this repo: `user-files/simulations/RecordedSimulation.scala`
-- method of generating an HAR file can capture a complete user journey on a site - logging in, browsing different pages etc
-- the `.exec(http("request_0")` commands in the scala file can be renamed for ease of understanding what the script is doing - e.g. `.exec(http("LOAD_HOMEPAGE")` as this is what will show up in the test report
-- when there are multiple steps to execute, the pause time between steps can also be altered
+- This HAR file can then be used in the recorder to produce a scala script, by selecting the HAR option in the recorder, selecting the correct .har file and clicking start
+- The script for this example is shown in this repo: `user-files/simulations/RecordedSimulation.scala`
+- Method of generating an HAR file can capture a complete user journey on a site - logging in, browsing different pages etc
+- The `.exec(http("request_0")` commands in the scala file can be renamed for ease of understanding what the script is doing - e.g. `.exec(http("LOAD_HOMEPAGE")` as this is what will show up in the test report
+- When there are multiple steps to execute, the pause time between steps can also be altered
 
 ## Running Gatling tests
-- in the same `bin` folder, execute the `gatling.sh/gatling.bat`, which will then return a list of simulation examples
-- when the chosen simulation is complete, the console will display a link to an HTML display of the results
+- In the same `bin` folder, execute the `gatling.sh/gatling.bat`, which will then return a list of simulation examples
+- When the chosen simulation is complete, the console will display a link to an HTML display of the results
 #### Load Test
-- when running the above `gatling` file, select the configured simluation from the previous recording
-- enter a suitable `rundescription` - what the test is/number of users being tested etc
-- load tests can be set up to add certain numbers of users over certain periods of time, e.g. 10 users added over 5 seconds
-- users are added with the `setUp` command
-
-#### DDOS attack
--  A distributed denial-of-service (DDoS) attack occurs when multiple systems flood the bandwidth or resources of a targeted system, usually one or more web servers
-- To simulate this, a large number of users are sent at once to try and overload the server. 
-- Similar to load tests but with the goal of crashing the server
-- For example add 100 users every 10 seconds
+- When running the above `gatling` file, select the configured simluation from the previous recording
+- Enter a suitable `rundescription` - what the test is/number of users being tested etc
+- Load tests can be set up to add certain numbers of users over certain periods of time, e.g. 10 users added over 5 seconds
+- Users are added with the `setUp` command
