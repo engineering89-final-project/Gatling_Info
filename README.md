@@ -40,8 +40,14 @@
 ## Running Gatling tests
 - In the same `bin` folder, execute the `gatling.sh/gatling.bat`, which will then return a list of simulation examples
 - When the chosen simulation is complete, the console will display a link to an HTML display of the results
-#### Load Test
+### Load Test
 - When running the above `gatling` file, select the configured simluation from the previous recording
 - Enter a suitable `rundescription` - what the test is/number of users being tested etc
 - Load tests can be set up to add certain numbers of users over certain periods of time, e.g. 10 users added over 5 seconds
 - Users are added with the `setUp` command
+
+## Configuring the script
+- We can configure the number of users and how they are run in the script. We can also add a global pause, add assertions and configure HTTP or HTTPS protocols through this script
+- The setUp() method is used to configure the user. In the example below it is configured for 1 user and use the HTTP protocol for load testing: setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+- The users can be varied for the load test you are carrying out 
+- The following command `setUp(scn.inject(rampUsers(10) over (5 seconds))).protocols(httpProtocol)` will add a specified number of users over a specified time
